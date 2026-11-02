@@ -9,3 +9,14 @@ dist/
 #   for f in music-original/*; do b=$(basename "$f"); \
 #     afconvert -f WAVE -d LEI16@44100 "$f" "src/music/${b%.*}.wav"; done
 src/music/*.wav
+
+# SNS 自動投稿用のアクセストークン（絶対に commit しない）
+.env.sns
+.sns-tmp/
+
+# SNS 運用一式は別の非公開リポジトリ（sound-sculpture-ops）で管理する
+docs/sns/
+# 手元の Claude の設定と出力
+.claude/settings.local.json
+.claude/scheduled_tasks.lock
+Claude outputs/

@@ -1,0 +1,5 @@
+# http:// で来た人を https:// へ転送する（マイク入力は安全な接続でしか動かないため）
+RewriteEngine On
+RewriteCond %{HTTPS} !on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
